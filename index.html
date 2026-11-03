@@ -220,11 +220,413 @@
                 padding: 18px;
             }
         }
+
+        /* Professional landing-page design layer */
+        :root {
+            --white: #ffffff;
+            --red: #c90818;
+            --orange: #f36a16;
+            --text: #202633;
+            --muted: #687386;
+            --light: #fff5f1;
+            --border: #e8eaf0;
+            --navy: #171e2b;
+            --soft: #f7f8fb;
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            background: #f5f6f9;
+            color: var(--text);
+            font-family: Inter, "Segoe UI", Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .site-header {
+            position: relative;
+            z-index: 2;
+            background: rgba(255,255,255,.97);
+            border-bottom: 1px solid #eceef2;
+            box-shadow: 0 5px 24px rgba(24,31,45,.045);
+        }
+        .site-header-inner {
+            max-width: 1160px;
+            min-height: 78px;
+            margin: 0 auto;
+            padding: 12px 26px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 800;
+            letter-spacing: .7px;
+        }
+        .brand:hover { color: var(--red); }
+        .brand-mark {
+            display: grid;
+            place-items: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 13px;
+            color: white;
+            font-size: 22px;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--red), var(--orange));
+            box-shadow: 0 7px 16px rgba(201,8,24,.2);
+        }
+        .brand-name { font-size: 15px; line-height: 1.2; }
+        .brand-name strong { color: var(--red); }
+        .header-note {
+            color: #7b8492;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .2px;
+        }
+        main {
+            width: 100%;
+            padding: 46px 22px 76px;
+            background:
+              radial-gradient(circle at 8% 3%, rgba(243,106,22,.07), transparent 25%),
+              radial-gradient(circle at 95% 18%, rgba(201,8,24,.055), transparent 24%),
+              #f5f6f9;
+        }
+        article {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 54px 54px;
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid #eceef2;
+            border-radius: 22px;
+            box-shadow: 0 18px 55px rgba(24,31,45,.075);
+        }
+        .article-header {
+            position: relative;
+            margin: 0 -54px 42px;
+            padding: 58px 54px 46px;
+            border: 0;
+            border-bottom: 1px solid #f0d9d3;
+            background:
+              radial-gradient(circle at 85% 15%, rgba(255,255,255,.18), transparent 23%),
+              linear-gradient(125deg, #a90617 0%, #cf1020 48%, #f36a16 100%);
+        }
+        .article-header:before {
+            content: "PEPTIDE SCIENCE";
+            display: inline-flex;
+            margin-bottom: 20px;
+            padding: 6px 12px;
+            border: 1px solid rgba(255,255,255,.35);
+            border-radius: 30px;
+            color: #fff;
+            background: rgba(255,255,255,.11);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.7px;
+        }
+        h1 {
+            max-width: 760px;
+            color: #fff;
+            font-size: clamp(32px, 4.2vw, 48px);
+            line-height: 1.14;
+            letter-spacing: -1.2px;
+            margin-bottom: 19px;
+            font-weight: 850;
+        }
+        .article-intro {
+            max-width: 790px;
+            color: rgba(255,255,255,.9);
+            font-size: 17px;
+            line-height: 1.85;
+        }
+        article > section { margin-top: 0; }
+        article > section:not(.conclusion):not(.faq-section) { margin-bottom: 38px; }
+        h2 {
+            position: relative;
+            color: #b7081a;
+            font-size: 27px;
+            line-height: 1.3;
+            margin-top: 48px;
+            margin-bottom: 19px;
+            padding: 0 0 13px;
+            border: 0;
+            letter-spacing: -.45px;
+        }
+        h2:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 62px;
+            height: 4px;
+            border-radius: 4px;
+            background: linear-gradient(90deg, var(--red), var(--orange));
+        }
+        h3 {
+            color: #252d3b;
+            font-size: 20px;
+            line-height: 1.4;
+            margin-top: 27px;
+            margin-bottom: 10px;
+        }
+        p { color: #4c5666; margin-bottom: 19px; }
+        a {
+            color: #c90818;
+            font-weight: 750;
+            text-decoration-thickness: 1.5px;
+            text-decoration-color: #f36a16;
+            text-underline-offset: 4px;
+        }
+        a:hover { color: #f36a16; }
+        .info-box {
+            background: linear-gradient(110deg, #fff5f1, #fff9f6);
+            border: 1px solid #ffe0d4;
+            border-left: 4px solid var(--orange);
+            padding: 22px 25px;
+            margin: 28px 0;
+            border-radius: 12px;
+        }
+        .info-box strong { color: #b7081a; }
+        .process-card {
+            position: relative;
+            border: 1px solid #e9ebf0;
+            border-top: 0;
+            border-left: 4px solid var(--orange);
+            border-radius: 13px;
+            padding: 23px 26px;
+            margin: 18px 0;
+            background: #fff;
+            box-shadow: 0 8px 24px rgba(24,31,45,.045);
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .process-card:hover, .benefit-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 13px 28px rgba(24,31,45,.08);
+        }
+        .process-card h3 { margin-top: 0; color: #b7081a; }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0,1fr));
+            gap: 18px;
+            margin: 27px 0;
+        }
+        .benefit-card {
+            border: 1px solid #e9ebf0;
+            border-bottom: 0;
+            border-radius: 14px;
+            padding: 23px;
+            background: linear-gradient(145deg, #fff, #fffaf8);
+            box-shadow: 0 7px 22px rgba(24,31,45,.04);
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .benefit-card h3 {
+            margin-top: 0;
+            font-size: 19px;
+            color: #b7081a;
+        }
+        ul { margin: 16px 0 25px 24px; }
+        li { margin-bottom: 11px; padding-left: 5px; color: #4c5666; }
+        .faq-section {
+            margin-top: 52px;
+            padding: 4px 28px 10px;
+            border: 1px solid #eceef2;
+            border-radius: 16px;
+            background: #fbfbfd;
+        }
+        .faq-section h2 { margin-top: 30px; }
+        .faq-item {
+            padding: 21px 0;
+            border-bottom: 1px solid #e8eaf0;
+        }
+        .faq-item:last-child { border-bottom: 0; }
+        .faq-item h3 {
+            margin-top: 0;
+            margin-bottom: 9px;
+            font-size: 18px;
+            color: #252d3b;
+        }
+        .faq-item p { margin-bottom: 0; }
+        .conclusion {
+            margin-top: 42px;
+            padding: 26px 30px;
+            border: 1px solid #f5d7cd;
+            border-left: 5px solid var(--red);
+            border-radius: 14px;
+            background: linear-gradient(120deg, #fff7f3, #fff);
+        }
+        .conclusion h2 { margin-top: 0; }
+        .disclaimer {
+            margin-top: 32px;
+            padding: 22px 24px 0;
+            border-top: 1px solid #eceef2;
+            color: #7b8492;
+            font-size: 13px;
+        }
+        .disclaimer p { color: #7b8492; margin-bottom: 0; }
+        .site-footer {
+            background: #171e2b;
+            color: #d7dce5;
+            padding: 34px 22px;
+        }
+        .site-footer-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .footer-brand {
+            color: white;
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .footer-brand strong { color: #ff7b35; }
+        .site-footer p {
+            margin: 0 0 8px;
+            color: #c1c8d3;
+            font-size: 13px;
+        }
+        .site-footer span { color: #8f99a9; font-size: 12px; }
+        @media (max-width: 700px) {
+            .site-header-inner { min-height: 68px; padding: 10px 18px; }
+            .header-note { display: none; }
+            main { padding: 22px 12px 42px; }
+            article {
+                padding: 0 22px 30px;
+                border-radius: 16px;
+            }
+            .article-header {
+                margin: 0 -22px 30px;
+                padding: 40px 23px 34px;
+            }
+            h1 { font-size: 32px; letter-spacing: -.7px; }
+            .article-intro { font-size: 15px; }
+            h2 { font-size: 23px; margin-top: 36px; }
+            h3 { font-size: 18px; }
+            body { font-size: 15px; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .info-box, .process-card, .benefit-card { padding: 18px; }
+            .faq-section { padding: 3px 18px 8px; }
+            .conclusion { padding: 21px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *:before, *:after { transition: none !important; }
+        }
+
+    
+        /* Professional header, sidebar and footer */
+        .site-header { position: sticky; top: 0; z-index: 20; }
+        .site-header-inner { max-width: 1320px; min-height: 82px; padding: 12px 30px; }
+        .brand { gap: 13px; }
+        .brand-mark { width: 45px; height: 45px; border-radius: 14px; }
+        .brand-name { display: flex; flex-direction: column; gap: 4px; font-size: 14px; letter-spacing: .8px; }
+        .brand-name small { color: #8992a1; font-size: 9px; font-weight: 700; letter-spacing: 1.8px; }
+        .top-nav { display: flex; align-items: center; gap: 30px; margin-left: auto; margin-right: 18px; }
+        .top-nav a { color: #596273; font-size: 13px; font-weight: 700; text-decoration: none; transition: color .2s ease; }
+        .top-nav a:hover { color: var(--red); }
+        .header-cta { display: inline-flex; align-items: center; gap: 10px; padding: 11px 17px; border-radius: 9px; color: #fff; background: linear-gradient(120deg,#b7081a,#ed641b); text-decoration: none; font-size: 12px; font-weight: 800; box-shadow: 0 7px 18px rgba(183,8,26,.16); }
+        .header-cta:hover { color: #fff; transform: translateY(-1px); }
+        main { padding: 42px 28px 76px; }
+        .page-layout { display: grid; grid-template-columns: 248px minmax(0, 1000px); align-items: start; justify-content: center; gap: 26px; max-width: 1320px; margin: 0 auto; }
+        .sidebar { position: sticky; top: 108px; padding: 25px 17px 18px; border: 1px solid #e8eaf0; border-radius: 16px; background: rgba(255,255,255,.94); box-shadow: 0 12px 34px rgba(24,31,45,.055); }
+        .sidebar-label { color: #d24b2b; font-size: 9px; font-weight: 900; letter-spacing: 1.8px; }
+        .sidebar-title { margin: 7px 0 18px; color: #202838; font-size: 17px; font-weight: 800; letter-spacing: -.3px; }
+        .toc { display: flex; flex-direction: column; gap: 4px; }
+        .toc a { display: flex; align-items: flex-start; gap: 10px; padding: 10px 9px; border-radius: 8px; color: #596273; font-size: 12px; line-height: 1.45; font-weight: 650; text-decoration: none; transition: background .2s ease,color .2s ease; }
+        .toc a span { color: #d15a38; font-size: 10px; font-weight: 900; letter-spacing: .4px; padding-top: 1px; }
+        .toc a:hover { color: #b7081a; background: #fff3ee; }
+        .sidebar-note { display: flex; gap: 10px; margin-top: 19px; padding: 13px 11px; border-radius: 10px; background: #f7f8fb; }
+        .note-icon { display: grid; flex: 0 0 20px; place-items: center; width: 20px; height: 20px; border-radius: 50%; color: #fff; background: #d65b36; font-size: 12px; font-weight: 800; }
+        .sidebar-note p { margin: 0; color: #778091; font-size: 10px; line-height: 1.55; }
+        .page-layout article { width: 100%; max-width: 1000px; min-width: 0; }
+        .site-footer { padding: 48px 28px 0; }
+        .site-footer-inner { max-width: 1250px; text-align: left; }
+        .footer-main { display: grid; grid-template-columns: 1.5fr .8fr .8fr 1.2fr; gap: 42px; padding-bottom: 35px; }
+        .footer-brand { display: inline-flex; align-items: center; gap: 11px; margin-bottom: 15px; color: #fff; text-decoration: none; }
+        .footer-mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 11px; color: #fff; background: linear-gradient(135deg,#c90818,#f36a16); font-size: 19px; font-weight: 900; }
+        .footer-brand strong { color: #ff7b35; }
+        .footer-about p, .footer-disclaimer p { max-width: 300px; color: #aeb7c5; font-size: 12px; line-height: 1.75; }
+        .footer-links { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; }
+        .footer-links h3, .footer-disclaimer h3 { margin: 2px 0 9px; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: .5px; }
+        .footer-links a { color: #aeb7c5; font-size: 12px; font-weight: 500; text-decoration: none; }
+        .footer-links a:hover { color: #ff8a4c; }
+        .footer-disclaimer p { margin: 0; }
+        .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding: 18px 0 20px; border-top: 1px solid rgba(255,255,255,.12); color: #8792a3; font-size: 11px; }
+        @media (max-width: 1050px) {
+          .page-layout { grid-template-columns: 210px minmax(0, 1fr); gap: 18px; }
+          .top-nav { gap: 16px; }
+          .footer-main { gap: 25px; }
+        }
+        @media (max-width: 760px) {
+          .site-header-inner { min-height: 70px; padding: 10px 16px; flex-wrap: wrap; }
+          .top-nav { order: 3; width: 100%; margin: 5px 0 0; padding: 9px 0 2px; justify-content: space-between; gap: 10px; border-top: 1px solid #f0f1f4; }
+          .top-nav a { font-size: 11px; }
+          .header-cta { padding: 9px 12px; font-size: 11px; }
+          main { padding: 20px 12px 42px; }
+          .page-layout { display: flex; flex-direction: column; gap: 15px; }
+          .sidebar { position: static; width: 100%; padding: 17px 15px; }
+          .sidebar-title { margin-bottom: 10px; }
+          .toc { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 3px; }
+          .toc a { padding: 8px 6px; font-size: 11px; }
+          .sidebar-note { margin-top: 10px; }
+          .page-layout article { width: 100%; }
+          .footer-main { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px 20px; }
+          .footer-bottom { flex-direction: column; gap: 5px; }
+        }
+        @media (max-width: 420px) {
+          .brand-name { font-size: 12px; }
+          .brand-mark { width: 39px; height: 39px; }
+          .header-cta { font-size: 10px; }
+          .toc { grid-template-columns: 1fr; }
+          .footer-main { grid-template-columns: 1fr; }
+        }
+
     </style>
 </head>
 
+
 <body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="#" aria-label="Peptides Costa Rica, inicio">
+      <span class="brand-mark">P</span>
+      <span class="brand-name">PEPTIDES <strong>COSTA RICA</strong><small>SCIENCE &amp; EDUCATION</small></span>
+    </a>
+    <nav class="top-nav" aria-label="Navegación principal">
+      <a href="#que-es">La liofilización</a>
+      <a href="#proceso">El proceso</a>
+      <a href="#faq">Preguntas frecuentes</a>
+    </nav>
+    <a class="header-cta" href="#conclusion">Leer la guía <span aria-hidden="true">→</span></a>
+  </div>
+</header>
 <main>
+  <div class="page-layout">
+    <aside class="sidebar" aria-label="Contenido del artículo">
+      <div class="sidebar-label">EN ESTA GUÍA</div>
+      <div class="sidebar-title">Explora el contenido</div>
+      <nav class="toc">
+        <a href="#que-es"><span>01</span> ¿Qué es la liofilización?</a>
+        <a href="#proceso"><span>02</span> Cómo funciona el proceso</a>
+        <a href="#beneficios"><span>03</span> Por qué se liofilizan</a>
+        <a href="#factores"><span>04</span> Factores de calidad</a>
+        <a href="#comparacion"><span>05</span> Liofilizados vs. solución</a>
+        <a href="#pureza"><span>06</span> Pureza y calidad</a>
+        <a href="#faq"><span>07</span> Preguntas frecuentes</a>
+        <a href="#conclusion"><span>08</span> Conclusión</a>
+      </nav>
+      <div class="sidebar-note">
+        <span class="note-icon">i</span>
+        <p>Contenido educativo y científico. Consulta las especificaciones de cada producto.</p>
+      </div>
+    </aside>
     <article>
         <header class="article-header">
             <h1>¿Qué Significa la Liofilización en los Péptidos?</h1>
@@ -244,7 +646,7 @@
         </section>
 
         <section>
-            <h2>¿Qué Es la Liofilización en los Péptidos?</h2>
+            <h2 id="que-es">¿Qué Es la Liofilización en los Péptidos?</h2>
 
             <p>
                 La liofilización, también conocida como secado por congelación, es una técnica de deshidratación que permite retirar el agua de una sustancia sin someterla a las temperaturas elevadas que suelen utilizarse en otros métodos de secado. Se basa en un fenómeno físico llamado sublimación, mediante el cual el hielo pasa directamente del estado sólido al gaseoso, sin convertirse primero en líquido.
@@ -260,7 +662,7 @@
         </section>
 
         <section>
-            <h2>¿Cómo Funciona el Proceso de Liofilización?</h2>
+            <h2 id="proceso">¿Cómo Funciona el Proceso de Liofilización?</h2>
 
             <p>
                 La liofilización se desarrolla en varias etapas controladas. Cada una cumple una función específica para eliminar el agua y obtener un material seco, procurando mantener las características fisicoquímicas de la sustancia.
@@ -296,7 +698,7 @@
         </section>
 
         <section>
-            <h2>¿Por Qué Se Liofilizan los Péptidos?</h2>
+            <h2 id="beneficios">¿Por Qué Se Liofilizan los Péptidos?</h2>
 
             <p>
                 Muchos péptidos presentan desafíos relacionados con su estabilidad cuando se encuentran en soluciones acuosas. El agua puede favorecer diferentes procesos de degradación, dependiendo de la secuencia de aminoácidos, el pH, la temperatura y otros componentes presentes en la formulación.
@@ -342,7 +744,7 @@
         </section>
 
         <section>
-            <h2>¿Qué Factores Influyen en la Calidad de los Péptidos Liofilizados?</h2>
+            <h2 id="factores">¿Qué Factores Influyen en la Calidad de los Péptidos Liofilizados?</h2>
 
             <p>
                 Obtener un polvo mediante liofilización no garantiza automáticamente que el producto mantenga todas sus propiedades. Existen diferentes variables que pueden influir en la calidad, la estabilidad y la integridad de la molécula.
@@ -370,7 +772,7 @@
         </section>
 
         <section>
-            <h2>Diferencia Entre Péptidos Liofilizados y Péptidos en Solución</h2>
+            <h2 id="comparacion">Diferencia Entre Péptidos Liofilizados y Péptidos en Solución</h2>
 
             <p>
                 Una diferencia importante entre ambas presentaciones es la cantidad de agua presente y la forma en que se conserva el material.
@@ -390,7 +792,7 @@
         </section>
 
         <section>
-            <h2>¿La Liofilización Garantiza la Pureza y Calidad?</h2>
+            <h2 id="pureza">¿La Liofilización Garantiza la Pureza y Calidad?</h2>
 
             <p>
                 No. La liofilización es un método de conservación y procesamiento, pero no constituye por sí misma una prueba de pureza, identidad o calidad. Un péptido puede estar liofilizado y aun así presentar impurezas, contaminación o problemas relacionados con su fabricación.
@@ -413,7 +815,7 @@
         </section>
 
         <section class="faq-section">
-            <h2>Preguntas Frecuentes Sobre la Liofilización de Péptidos</h2>
+            <h2 id="faq">Preguntas Frecuentes Sobre la Liofilización de Péptidos</h2>
 
             <div class="faq-item">
                 <h3>1. ¿Qué significa que un péptido esté liofilizado?</h3>
@@ -445,7 +847,7 @@
         </section>
 
         <section class="conclusion">
-            <h2>Conclusión</h2>
+            <h2 id="conclusion">Conclusión</h2>
 
             <p>
                 La liofilización es una tecnología importante en el procesamiento y la conservación de determinados péptidos. Mediante la congelación, la sublimación y la eliminación controlada de la humedad residual, permite obtener materiales secos que pueden ofrecer ventajas de estabilidad, almacenamiento y manipulación.
@@ -466,6 +868,37 @@
             </p>
         </footer>
     </article>
+  </div>
 </main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="footer-main">
+      <div class="footer-about">
+        <a class="footer-brand" href="#"><span class="footer-mark">P</span><span>PEPTIDES <strong>COSTA RICA</strong></span></a>
+        <p>Información educativa sobre ciencia, investigación y calidad de péptidos.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Explorar</h3>
+        <a href="#que-es">La liofilización</a>
+        <a href="#proceso">Etapas del proceso</a>
+        <a href="#beneficios">Beneficios</a>
+      </div>
+      <div class="footer-links">
+        <h3>Información</h3>
+        <a href="#factores">Factores de calidad</a>
+        <a href="#faq">Preguntas frecuentes</a>
+        <a href="#conclusion">Conclusión</a>
+      </div>
+      <div class="footer-disclaimer">
+        <h3>Nota educativa</h3>
+        <p>El contenido es informativo y no sustituye el asesoramiento médico ni las especificaciones técnicas de cada producto.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Peptides Costa Rica. Todos los derechos reservados.</span>
+      <span>Información con fines educativos y científicos.</span>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
